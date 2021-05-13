@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zookeeper-uat
+  namespace: geode-ap136976-dev-aks
+spec:
+  selector:
+    matchLabels:
+      app: zookeeper-uat
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: zookeeper-uat
+    spec:
+      imagePullSecrets:
+      - name: registry-secret
+      containers:
+      - name: zookeeper-uat
+        image: fcr-nonprod.fmr.com/zookeeper:latest
+        ports:
+        - containerPort: 2181
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-uat
+  namespace: geode-ap136976-dev-aks
+spec:
+  selector:
+    matchLabels:
+      app: kafka-uat
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kafka-uat
+    spec:
+      imagePullSecrets:
+      - name: registry-secret
+      containers:
+      - name: kafka-uat
+        image: fcr-nonprod.fmr.com/wurstmeister/kafka:latest
+        envFrom:
+        - configMapRef:
+            name: kafka-cm
+        ports:
+        - containerPort: 9092
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kafka-cm
+  namespace: geode-ap136976-dev-aks
+  labels:
+    app: kafka-cm
+data:
+  KAFKA_ZOOKEEPER_CONNECT: zookeeper_uat:2181
+  KAFKA_LISTENERS: PLAINTEXT://kafka_uat:9092
+  KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka_uat:9092
