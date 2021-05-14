@@ -1,3 +1,42 @@
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: zookeeper-uat
+  namespace: geode-ap136976-dev-aks
+spec:
+  type: ClusterIP
+  ports:
+   - name: client
+     port: 2181
+     protocol: TCP
+   - name: follower
+     port: 2888
+     protocol: TCP
+   - name: leader
+     port: 3888
+     protocol: TCP
+  selector:
+    app: zookeeper-uat
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka-uat
+  namespace: geode-ap136976-dev-aks
+spec:
+  type: ClusterIP
+  ports:
+  - port: 9092
+    targetPort: 9092
+  selector:
+    app: kafka-uat
+
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,9 +56,14 @@ spec:
       - name: registry-secret
       containers:
       - name: zookeeper-uat
-        image: fcr-nonprod.fmr.com/zookeeper:latest
+        image: fcr-nonprod.fmr.com/wurstmeister/zookeeper:latest
         ports:
         - containerPort: 2181
+#        env:
+#          - name: ZOOKEEPER_ID
+#            value: "1"
+
+---
 
 apiVersion: apps/v1
 kind: Deployment
@@ -41,20 +85,12 @@ spec:
       containers:
       - name: kafka-uat
         image: fcr-nonprod.fmr.com/wurstmeister/kafka:latest
-        envFrom:
-        - configMapRef:
-            name: kafka-cm
         ports:
         - containerPort: 9092
-
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: kafka-cm
-  namespace: geode-ap136976-dev-aks
-  labels:
-    app: kafka-cm
-data:
-  KAFKA_ZOOKEEPER_CONNECT: zookeeper_uat:2181
-  KAFKA_LISTENERS: PLAINTEXT://kafka_uat:9092
-  KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka_uat:9092
+        env:
+          - name: KAFKA_ZOOKEEPER_CONNECT
+            value: "zookeeper-uat:2181"
+          - name: KAFKA_LISTENERS
+            value: "PLAINTEXT://kafka-uat:9092"
+          - name: KAFKA_ADVERTISED_LISTENERS
+            value: "PLAINTEXT://kafka-uat:9092"
