@@ -1,0 +1,60 @@
+
+           _                                     _       _        _             _         _       _                 _    _
+          /_\    ___   ___   ___   _   _  _ __  | |_    /_\    __| | _ __ ___  (_) _ __  (_) ___ | |_  _ __   __ _ | |_ (_)  ___   _ __
+         //_\\  / __| / __| / _ \ | | | || '_ \ | __|  //_\\  / _` || '_ ` _ \ | || '_ \ | |/ __|| __|| '__| / _` || __|| | / _ \ | '_ \
+        /  _  \| (__ | (__ | (_) || |_| || | | || |_  /  _  \| (_| || | | | | || || | | || |\__ \| |_ | |   | (_| || |_ | || (_) || | | |
+        \_/ \_/ \___| \___| \___/  \__,_||_| |_| \__| \_/ \_/ \__,_||_| |_| |_||_||_| |_||_||___/ \__||_|    \__,_| \__||_| \___/ |_| |_|
+
+
+ ==================================================================================================================================
+ Application Version :  (v19.14.8)
+ Application Title : acctadmin
+ Spring Boot Version :  (v2.1.0.RELEASE)
+ ==================================================================================================================================
+2021-May-17 00:51:41.007   INFO  [main] c.g.a.Application - Starting Application v19.14.8 on acctadmin-58cf579cf7-4rgfx with PID 7 (/opt/geode-acctadmin-boot-19.14.8.jar started by gcmprod in /)
+2021-May-17 00:51:41.012   INFO  [main] c.g.a.Application - The following profiles are active: uat,force_scheduler_start
+2021-May-17 00:51:52.712   INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-May-17 00:51:52.712   INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-May-17 00:51:53.811   INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1000ms. Found 2 repository interfaces.
+2021-May-17 00:51:57.325   INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-May-17 00:51:57.326   INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-May-17 00:51:57.418   INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 92ms. Found 0 repository interfaces.
+2021-May-17 00:52:00.915   INFO  [main] c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2021-May-17 00:52:02.914   INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-May-17 00:52:02.915   INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource commandLineArgs [org.springframework.core.env.SimpleCommandLinePropertySource] to EncryptableEnumerablePropertySourceWrapper
+2021-May-17 00:52:02.915   INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-May-17 00:52:02.916   INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-May-17 00:52:02.916   INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-May-17 00:52:02.916   INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-May-17 00:52:02.917   INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-May-17 00:52:02.917   INFO  [main] c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationConfig: [file:/opt/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-May-17 00:52:03.714   INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$ac4a8891] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-May-17 00:52:03.818   INFO  [main] c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-May-17 00:52:05.412   INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d898770e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-May-17 00:52:05.817   INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$71463f48] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-May-17 00:52:05.912   INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-May-17 00:52:05.915   INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5a5338df' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-May-17 00:52:06.004   INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$961ae1fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-May-17 00:52:06.017   INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration' of type [org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration$$EnhancerBySpringCGLIB$$bb6ffa10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-May-17 00:52:06.104   INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jsr250MethodSecurityMetadataSource' of type [org.springframework.security.access.annotation.Jsr250MethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-May-17 00:52:06.107   INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-May-17 00:52:07.106   INFO  [main] c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-May-17 00:52:07.111   INFO  [main] c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-May-17 00:52:11.308   INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8058 (http)
+2021-May-17 00:52:11.614   INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8058"]
+2021-May-17 00:52:11.708   INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2021-May-17 00:52:11.709   INFO  [main] o.a.c.c.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2021-May-17 00:52:11.724   INFO  [main] o.a.c.c.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2021-May-17 00:52:12.514   INFO  [main] o.a.c.c.C.[.[.[/acctadmin] - Initializing Spring embedded WebApplicationContext
+2021-May-17 00:52:12.514   INFO  [main] o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 30798 ms
+2021-May-17 00:52:20.507   INFO  [main] o.e.j.ConfigurationMerger - Configuration of cache holidayCache will be supplemented by template holiday-template
+2021-May-17 00:52:21.417   INFO  [main] o.t.o.p.UpfrontAllocatingPageSource - Allocating 100.0MB in chunks
+2021-May-17 00:52:22.305   INFO  [main] o.e.c.EhcacheManager - Cache 'holidayCache' created in EhcacheManager.
+2021-May-17 00:52:22.313   INFO  [main] o.e.j.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=jar.file./opt/geode-acctadmin-boot-19.14.8.jar!/BOOT-INF/classes!/ehcache.xml,Cache=holidayCache
+2021-May-17 00:52:22.319   INFO  [main] o.e.j.ConfigurationMerger - Configuration of cache countryCache will be supplemented by template country-template
+2021-May-17 00:52:22.409   INFO  [main] o.t.o.p.UpfrontAllocatingPageSource - Allocating 100.0MB in chunks
+2021-May-17 00:52:23.017   INFO  [main] o.e.c.EhcacheManager - Cache 'countryCache' created in EhcacheManager.
+2021-May-17 00:52:23.017   INFO  [main] o.e.j.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=jar.file./opt/geode-acctadmin-boot-19.14.8.jar!/BOOT-INF/classes!/ehcache.xml,Cache=countryCache
+2021-May-17 00:52:23.105   INFO  [main] o.e.j.ConfigurationMerger - Configuration of cache calendarCache will be supplemented by template calendar-template
+2021-May-17 00:52:23.204   INFO  [main] o.t.o.p.UpfrontAllocatingPageSource - Allocating 100.0MB in chunks
+/opt/start.sh: line 1:     7 Killed                  java -jar /opt/geode-acctadmin-boot-19.14.8.jar --spring.config.location=/opt/application.properties
